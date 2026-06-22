@@ -6,12 +6,12 @@
     </head>
     <body>
         <form action="week5-receive.php" method="get">
-            <label>ชื่อ</label>
-            <input type="text" name="username">
+            <label>ชื่อ นาม</label>
+            <input type="text" name="username" required>
             <br>
 
             <label>สกุล</label>
-            <input type="text" name="lastname">
+            <input type="text" name="lastname" required>
             <br>
             
             <label>รหัสผ่าน</label>
@@ -23,7 +23,7 @@
             <br>
             
             <label>อายุ</label>
-            <input type="number" name="age" min="15" max="200">
+            <input type="number" name="number" min="15" max="200">
             <br>
 
             <label>เพศ</label>
@@ -135,10 +135,16 @@
             <br>
 
             <label>ความคิดเห็น</label>
-            <textarea name="message"></textarea>
+            <textarea name="userMsg"></textarea>
             <br>
 
+            <br>
+
+            <input type="reset" value="ล้างข้อมูล">
+
             <input type="submit" value="ส่งข้อมูล">
+            <br>
+
 
         </form>
     </body>
