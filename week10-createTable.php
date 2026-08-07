@@ -18,17 +18,12 @@
         );
 
         $sql ="
-        CREATE TABLE IF NOT EXISTS student(
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            name VARCHAR(100) NOT NULL,
-            email VARCHAR(100),
-            age INT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
+        INSERT INTO student (name,email,age)
+        VALUES ('ตกเตียง ตอนนอนเสื่อ', 'example3@email.com', 21)
         ";
 
         $pdo->exec($sql);
-        echo "สร้างตารางสำเร็จ";
+        echo "เพิ่มข้อมูลสำเร็จแล้ว";
     }catch(PDOException $e){
         echo "เกิดข้อผิดพลาด : " . $e->getMessage();
     }
